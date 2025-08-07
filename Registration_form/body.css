@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.form-container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  width: 400px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input.invalid, select.invalid, textarea.invalid {
+  border-color: red;
+}
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+
+.error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+.gender label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 6px;
+  margin-bottom: 5px;
+}
+
+.required {
+  color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+}
