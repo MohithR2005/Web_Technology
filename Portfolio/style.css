@@ -1,0 +1,277 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: url('beach.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.65);
+  z-index: 0;
+  pointer-events: none;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  margin: 24px;
+  background: none;
+  position: relative;
+  z-index: 1;
+}
+body.dark::before {
+  background: rgba(35,39,47,0.65);
+}
+body.dark {
+  background: url('beach.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f0f0;
+}
+.name {
+  font-size: 2.8rem;
+  font-weight: 200;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+  font-family: 'Gabriela', serif;
+}
+.role {
+  font-size: 1.1rem;
+  color: #bfc8e6;
+  margin-bottom: 32px;
+}
+body.dark .role {
+  color: #e0e6f8;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+.nav ul {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+.nav li {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  user-select: none;
+  outline: none;
+}
+.nav li:hover, .nav li.active {
+  text-decoration: underline;
+}
+.main-content {
+  flex: 2 1 0%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 48px 0 0;
+}
+.bio {
+  max-width: 320px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #222;
+  text-align: left;
+  line-height: 1.5;
+}
+body.dark .bio {
+  color: #f0f0f0;
+}
+.contact-info-box {
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  background: rgba(30, 34, 44, 0.92);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 20px 32px;
+  z-index: 100;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
+  display: none;
+  min-width: 260px;
+}
+.contact-info-box.show {
+  display: block;
+}
+.contact-info-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contact-info-box li {
+  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+}
+.contact-info-box a {
+  color: #7ecbff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-info-box a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/* Certifications List Styles */
+.certifications-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(30, 30, 30, 0.85);
+  color: #fff;
+  margin: 0 0 0 20px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-size: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.certifications-list.show {
+  max-height: 500px;
+  padding: 10px 10px;
+}
+.certifications-list li {
+  list-style: disc;
+  margin: 8px 0;
+}
+.certifications-list a {
+  color: #ffd700;
+  text-decoration: underline;
+  word-break: break-all;
+}
+.certifications-toggle {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+.certifications-toggle:hover {
+  color: #ffd700;
+}
+/* About Me Section Styles */
+.aboutme-section {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
+  background: rgba(30, 30, 30, 0.92);
+  color: #fff;
+  margin: 20px 0 0 0;
+  padding: 0 24px;
+  border-radius: 10px;
+  font-family: 'Quicksand', Arial, sans-serif;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  font-size: 1.08em;
+}
+.aboutme-section.show {
+  max-height: 900px;
+  opacity: 1;
+  padding: 24px;
+}
+.aboutme-section h2 {
+  font-family: 'Gabriela', serif;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+.aboutme-section ul {
+  margin: 12px 0 12px 18px;
+  padding: 0;
+}
+.aboutme-section li {
+  margin: 6px 0;
+  list-style: disc;
+}
+.aboutme-toggle {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.aboutme-toggle:hover, .aboutme-toggle:focus {
+  color: #ffd700;
+  background: rgba(255, 215, 0, 0.08);
+  outline: none;
+}
+@media (max-width: 700px) {
+  .aboutme-section {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+  .aboutme-section.show {
+    padding: 14px;
+  }
+}
+/* Sidebar header flex layout for name and bio in one line */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+.sidebar-header .name {
+  white-space: nowrap;
+  font-size: 1.3em;
+  margin: 0;
+}
+.bio-inline {
+  flex: 1;
+  margin: 0;
+  font-size: 1em;
+  color: #e0e0e0;
+}
+.bio-inline p {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .sidebar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .sidebar-header .name {
+    font-size: 1.1em;
+  }
+  .bio-inline {
+    font-size: 0.98em;
+  }
+}
+/* Bio Box Styles */
+.bio-box {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 350px;
+  height: 350px;
+  background: none;
+  color: #222;
+  padding: 28px 22px;
+  font-family: 'Quicksand', Arial, sans-serif;
+  font-size: 1.08em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  box-shadow: none;
+  border-radius: 0;
+}
+@media (max-width: 900px) {
+  .bio-box {
+    position: static;
+    width: 90vw;
+    height: auto;
+    margin: 20px auto;
+    font-size: 1em;
+    padding: 18px 8px;
+  }
+}
