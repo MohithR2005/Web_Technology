@@ -1,0 +1,57 @@
+/* Background and Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1950&q=80'); /* Weather-themed background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container Card */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85); /* translucent background */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    width: 70%;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Search Bar */
+.search input {
+    font-size: 16px;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.search button {
+    font-size: 16px;
+    color: white;
+    padding: 15px 40px;
+    background-color: #2ea4e4;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(46, 164, 228, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #1b85c1;
+}
+
+/* Optional weather report styling */
+.Weather-Report {
+    margin-top: 20px;
+    font-size: 18px;
+}
